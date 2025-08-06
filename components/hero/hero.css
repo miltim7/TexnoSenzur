@@ -408,6 +408,10 @@
 }
 
 @media (max-width: 480px) {
+    .hero__content {
+        margin-top: 5rem;
+    }
+
     .hero__stats {
         gap: 1rem;
     }
