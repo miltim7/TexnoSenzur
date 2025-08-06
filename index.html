@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEXNO SENZUR - İnnovativ Texnologiyalar</title>
+    
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="components/header/header.css">
+    <link rel="stylesheet" href="components/hero/hero.css">
+    <link rel="stylesheet" href="components/tech/tech.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-    <!-- Добавьте перед закрывающим </body> -->
-    <link rel="stylesheet" href="components/hero/hero.css">
+        rel="stylesheet">    
 </head>
 
 <body>
@@ -203,15 +204,126 @@
             </div>
         </section>
 
-        <section id="services"
-            style="height: 100vh; background: #1a1a1a; display: flex; align-items: center; justify-content: center;">
-            <h2 style="color: #ff6b35; font-size: 3rem;">Xidmətlər</h2>
+        <section class="texnikalar" id="texnikalar">
+            <div class="container">
+                <div class="texnikalar__header">
+                    <div class="texnikalar__badge">
+                        <span class="texnikalar__badge-dot"></span>
+                        <span class="texnikalar__badge-text">Müasir Texnika</span>
+                    </div>
+                    <h2 class="texnikalar__title">TEXNİKALAR</h2>
+                    <p class="texnikalar__subtitle">
+                        Ən müasir və etibarlı texnikalar. Hər növ layihə üçün peşəkar həllər.
+                    </p>
+                </div>
+
+                <div class="texnikalar__filters">
+                    <button class="filter-btn active" data-filter="all">Hamısı</button>
+                    <button class="filter-btn" data-filter="excavator">Qazıcı</button>
+                    <button class="filter-btn" data-filter="loader">Yükləyici</button>
+                    <button class="filter-btn" data-filter="crane">Kran</button>
+                    <button class="filter-btn" data-filter="bulldozer">Buldozer</button>
+                    <button class="filter-btn" data-filter="grader">Qreyder</button>
+                    <button class="filter-btn" data-filter="mixer">Qarışdırıcı</button>
+                </div>
+
+                <div class="texnikalar__grid">
+                    <div class="technique-card" data-category="excavator">
+                        <div class="technique-card__image">
+                            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=400"
+                                alt="Excavator">
+                        </div>
+                        <div class="technique-card__content">
+                            <h3 class="technique-card__title">CAT 320D</h3>
+                            <span class="technique-card__category">Qazıcı</span>
+                        </div>
+                    </div>
+
+                    <div class="technique-card" data-category="excavator">
+                        <div class="technique-card__image">
+                            <img src="https://images.unsplash.com/photo-1621585343880-17ac70c84b4b?w=400"
+                                alt="Excavator">
+                        </div>
+                        <div class="technique-card__content">
+                            <h3 class="technique-card__title">JCB 220</h3>
+                            <span class="technique-card__category">Qazıcı</span>
+                        </div>
+                    </div>
+
+                    <div class="technique-card" data-category="loader">
+                        <div class="technique-card__image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Loader">
+                        </div>
+                        <div class="technique-card__content">
+                            <h3 class="technique-card__title">CAT 950M</h3>
+                            <span class="technique-card__category">Yükləyici</span>
+                        </div>
+                    </div>
+
+                    <div class="technique-card" data-category="crane">
+                        <div class="technique-card__image">
+                            <img src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=400" alt="Crane">
+                        </div>
+                        <div class="technique-card__content">
+                            <h3 class="technique-card__title">Liebherr LTM</h3>
+                            <span class="technique-card__category">Kran</span>
+                        </div>
+                    </div>
+
+                    <div class="technique-card" data-category="bulldozer">
+                        <div class="technique-card__image">
+                            <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400"
+                                alt="Bulldozer">
+                        </div>
+                        <div class="technique-card__content">
+                            <h3 class="technique-card__title">CAT D6T</h3>
+                            <span class="technique-card__category">Buldozer</span>
+                        </div>
+                    </div>
+
+                    <div class="technique-card" data-category="grader">
+                        <div class="technique-card__image">
+                            <img src="https://images.unsplash.com/photo-1611919063652-e56d3c2aded0?w=400" alt="Grader">
+                        </div>
+                        <div class="technique-card__content">
+                            <h3 class="technique-card__title">CAT 140M</h3>
+                            <span class="technique-card__category">Qreyder</span>
+                        </div>
+                    </div>
+
+                    <div class="technique-card" data-category="mixer">
+                        <div class="technique-card__image">
+                            <img src="https://images.unsplash.com/photo-1580662129867-ccc6f01afd2d?w=400" alt="Mixer">
+                        </div>
+                        <div class="technique-card__content">
+                            <h3 class="technique-card__title">Volvo FM</h3>
+                            <span class="technique-card__category">Qarışdırıcı</span>
+                        </div>
+                    </div>
+
+                    <div class="technique-card" data-category="excavator">
+                        <div class="technique-card__image">
+                            <img src="https://images.unsplash.com/photo-1516650893100-d8aa5cd0e461?w=400"
+                                alt="Excavator">
+                        </div>
+                        <div class="technique-card__content">
+                            <h3 class="technique-card__title">Volvo EC380E</h3>
+                            <span class="technique-card__category">Qazıcı</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="texnikalar__load-more">
+                    <button class="load-more-btn">Daha çox göstər</button>
+                </div>
+            </div>
         </section>
     </main>
 
 
     <script src="components/header/header.js"></script>
     <script src="components/hero/hero.js"></script>
+    <script src="components/tech/tech.js"></script>
 </body>
 
 </html>
