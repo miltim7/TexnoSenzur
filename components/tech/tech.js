@@ -35,20 +35,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Create technique card
     function createTechniqueCard(technique) {
-        return `
-            <div class="technique-card" data-id="${technique.id}">
-                <div class="technique-card__image">
-                    <img src="${technique.image}" alt="${technique.title}" loading="lazy">
-                    <div class="technique-card__overlay">
-                        <div class="overlay-icon">🔍</div>
+    return `
+        <div class="technique-card" data-id="${technique.id}">
+            <div class="technique-card__image">
+                <img src="${technique.image}" alt="${technique.title}" loading="lazy">
+                <div class="technique-card__overlay">
+                    <div class="overlay-icon">
+                        <svg viewBox="0 0 24 24">
+                            <defs>
+                                <linearGradient id="overlaySearchGradient${technique.id}" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#c99a18"/>
+                                    <stop offset="100%" style="stop-color:#e7b836"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="9" cy="9" r="6" fill="none" stroke="url(#overlaySearchGradient${technique.id})" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+                            <line x1="20" y1="20" x2="15" y2="15" stroke="url(#overlaySearchGradient${technique.id})" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></line>
+                        </svg>
                     </div>
                 </div>
-                <div class="technique-card__content">
-                    <h3 class="technique-card__title">${technique.title}</h3>
-                </div>
             </div>
-        `;
-    }
+            <div class="technique-card__content">
+                <h3 class="technique-card__title">${technique.title}</h3>
+            </div>
+        </div>
+    `;
+}
 
     // Filter techniques by search
     function getFilteredTechniques() {
