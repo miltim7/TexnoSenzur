@@ -173,15 +173,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const style = document.createElement('style');
     style.textContent = `
         .header__nav-link.active {
-            color: #ff6b35;
+            color: #c99a18;
         }
         .header__nav-link.active::after {
             transform: translateX(-50%) scaleX(1);
         }
         .header__mobile-nav-link.active {
-            color: #ff6b35;
+            color: #c99a18;
             background: rgba(255, 107, 53, 0.05);
-            border-left-color: #ff6b35;
+            border-left-color: #c99a18;
         }
         .ripple {
             position: absolute;
