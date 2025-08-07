@@ -34,33 +34,6 @@
     overflow: hidden;
 }
 
-/* Клетчатый фон */
-.texnikalar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        linear-gradient(var(--texnikalar-white-alpha-05) 1px, transparent 1px),
-        linear-gradient(90deg, var(--texnikalar-white-alpha-05) 1px, transparent 1px),
-        linear-gradient(var(--texnikalar-primary-alpha-05) 1px, transparent 1px),
-        linear-gradient(90deg, var(--texnikalar-primary-alpha-05) 1px, transparent 1px);
-    background-size: 
-        50px 50px,
-        50px 50px,
-        10px 10px,
-        10px 10px;
-    background-position: 
-        0 0,
-        0 0,
-        0 0,
-        0 0;
-    opacity: 0.6;
-    z-index: 1;
-    animation: gridMove 60s linear infinite;
-}
 
 @keyframes gridMove {
     0% { transform: translate(0, 0); }
@@ -476,14 +449,6 @@
 
 /* Адаптивные размеры сетки */
 @media (max-width: 1024px) {
-    .texnikalar::before {
-        background-size: 
-            40px 40px,
-            40px 40px,
-            8px 8px,
-            8px 8px;
-    }
-    
     .texnikalar__grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 1.5rem;
@@ -493,15 +458,6 @@
 @media (max-width: 768px) {
     .texnikalar {
         padding: 4rem 0;
-    }
-    
-    .texnikalar::before {
-        background-size: 
-            30px 30px,
-            30px 30px,
-            6px 6px,
-            6px 6px;
-        animation-duration: 40s;
     }
     
     .container {
@@ -560,15 +516,6 @@
 }
 
 @media (max-width: 480px) {
-    .texnikalar::before {
-        background-size: 
-            20px 20px,
-            20px 20px,
-            4px 4px,
-            4px 4px;
-        animation-duration: 30s;
-    }
-    
     .texnikalar__grid {
         grid-template-columns: 1fr;
     }

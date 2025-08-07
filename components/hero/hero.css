@@ -391,6 +391,10 @@
 
 /* АДАПТИВНОСТЬ */
 @media (max-width: 768px) {
+    .hero__content {
+        margin-top: 6rem;
+    }
+
     .hero__title {
         font-size: clamp(2rem, 10vw, 4rem);
     }
@@ -428,7 +432,7 @@
 
 @media (max-width: 480px) {
     .hero__content {
-        margin-top: 5rem;
+        margin-top: 8rem;
     }
 
     .hero__stats {
@@ -441,9 +445,5 @@
     
     .hero__stat-label {
         font-size: 0.7rem;
-    }
-
-    .hero__badge  {
-        display: none;
     }
 }
