@@ -4,6 +4,35 @@ document.addEventListener('DOMContentLoaded', function () {
     let searchTerm = '';
     let allTechniques = [];
 
+    // Определяем базовый путь в зависимости от языковой версии
+    const currentPath = window.location.pathname;
+    const isSubdirectory = currentPath.includes('/ru/') || currentPath.includes('/en/');
+    const basePath = isSubdirectory ? '../' : '';
+
+    // Определяем язык для локализации текста пагинации
+    let currentLang = 'az'; // По умолчанию азербайджанский
+    if (currentPath.includes('/ru/')) {
+        currentLang = 'ru';
+    } else if (currentPath.includes('/en/')) {
+        currentLang = 'en';
+    }
+
+    // Локализация текста
+    const translations = {
+        az: {
+            prev: 'Əvvəlki',
+            next: 'Növbəti'
+        },
+        ru: {
+            prev: 'Предыдущая',
+            next: 'Следующая'
+        },
+        en: {
+            prev: 'Previous',
+            next: 'Next'
+        }
+    };
+
     // Technique names array
     const techniqueNames = [
         'Ford 1826', 'Ford 3536d', 'Mercedes Atego 815', 'Hyundai hd65', 'Qazel', 'Mitsubishi L200', 'Ford Cargo 3532T', 'Ford Cargo 1826', 'Ford Cargo',
@@ -28,8 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let i = 1; i <= 76; i++) {
             allTechniques.push({
                 id: i,
-                image: `assets/images/tech/${i}.jpg`,
-                title: techniqueNames[i - 1] // используем названия по порядку
+                image: `${basePath}assets/images/tech/${i}.jpg`,
+                title: techniqueNames[i - 1]
             });
         }
     }
@@ -92,14 +121,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Update statistics
     function updateStats(totalCount) {
-        document.querySelector('.stat-number[data-stat="total"]').textContent = totalCount;
-        document.querySelector('.stat-number[data-stat="showing"]').textContent =
-            Math.min(ITEMS_PER_PAGE, totalCount - (currentPage - 1) * ITEMS_PER_PAGE);
-        document.querySelector('.stat-number[data-stat="page"]').textContent = currentPage;
+        const totalElement = document.querySelector('.stat-number[data-stat="total"]');
+        const showingElement = document.querySelector('.stat-number[data-stat="showing"]');
+        const pageElement = document.querySelector('.stat-number[data-stat="page"]');
+        
+        if (totalElement) totalElement.textContent = totalCount;
+        if (showingElement) showingElement.textContent = Math.min(ITEMS_PER_PAGE, totalCount - (currentPage - 1) * ITEMS_PER_PAGE);
+        if (pageElement) pageElement.textContent = currentPage;
     }
 
     // Update pagination
-    // Update pagination (замени эту функцию в tech.js)
     function updatePagination(totalCount) {
         const totalPages = Math.ceil(totalCount / ITEMS_PER_PAGE);
         const pagination = document.querySelector('.pagination');
@@ -114,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Previous button
         paginationHTML += `
         <button class="pagination-btn pagination-btn--nav" data-page="prev" ${currentPage === 1 ? 'disabled' : ''}>
-            ← Əvvəlki
+            ← ${translations[currentLang].prev}
         </button>
     `;
 
@@ -156,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Next button
         paginationHTML += `
         <button class="pagination-btn pagination-btn--nav" data-page="next" ${currentPage === totalPages ? 'disabled' : ''}>
-            Növbəti →
+            ${translations[currentLang].next} →
         </button>
     `;
 
@@ -232,7 +263,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Scroll to top
     function scrollToTop() {
-        document.querySelector('.texnikalar').scrollIntoView({ behavior: 'smooth' });
+        const section = document.querySelector('.texnikalar');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 
     // Initialize
@@ -241,17 +275,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Search input
         const searchInput = document.querySelector('.search-input');
-        searchInput.addEventListener('input', function () {
-            searchTerm = this.value;
-            currentPage = 1;
-            renderTechniques();
-        });
+        if (searchInput) {
+            searchInput.addEventListener('input', function () {
+                searchTerm = this.value;
+                currentPage = 1;
+                renderTechniques();
+            });
+        }
 
         // Lightbox close
-        document.querySelector('.lightbox__close').addEventListener('click', closeLightbox);
-        document.querySelector('.lightbox').addEventListener('click', function (e) {
-            if (e.target === this) closeLightbox();
-        });
+        const lightboxClose = document.querySelector('.lightbox__close');
+        const lightbox = document.querySelector('.lightbox');
+        
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', closeLightbox);
+        }
+        
+        if (lightbox) {
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === this) closeLightbox();
+            });
+        }
 
         // ESC key to close lightbox
         document.addEventListener('keydown', function (e) {
