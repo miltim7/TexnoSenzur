@@ -107,7 +107,7 @@
 }
 
 .texnikalar__title {
-    font-size: clamp(3rem, 8vw, 5rem);
+    font-size: clamp(2.6rem, 7vw, 4rem);
     font-weight: 900;
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, var(--texnikalar-black) 0%, var(--texnikalar-gray) 100%);

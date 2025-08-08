@@ -136,3 +136,7 @@ p {
     background: #c99a184b;
     color: #c99a18;
 }
+
+section[id] {
+    scroll-margin-top: 300px;
+}

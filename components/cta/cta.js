@@ -5,15 +5,15 @@ class CtaSection {
         this.primaryBtn = document.querySelector('.cta__btn--primary');
         this.secondaryBtn = document.querySelector('.cta__btn--secondary');
         this.features = document.querySelectorAll('.cta__feature');
-        this.visual = document.querySelector('.cta__visual');
-
+        this.logo = document.querySelector('.cta__logo');
+        
         this.init();
     }
 
     init() {
         this.setupIntersectionObserver();
         this.setupButtonInteractions();
-        this.setupVisualAnimations();
+        this.setupLogoInteraction();
         this.setupFeatureAnimations();
     }
 
@@ -43,7 +43,8 @@ class CtaSection {
             this.section.querySelector('.cta__title'),
             this.section.querySelector('.cta__subtitle'),
             this.section.querySelector('.cta__buttons'),
-            this.section.querySelector('.cta__features')
+            this.section.querySelector('.cta__features'),
+            this.section.querySelector('.cta__logo')
         ];
 
         elements.forEach((element, index) => {
@@ -57,7 +58,7 @@ class CtaSection {
 
         setTimeout(() => {
             this.animateFeatures();
-        }, 1000);
+        }, 1200);
     }
 
     setupButtonInteractions() {
@@ -78,14 +79,14 @@ class CtaSection {
 
     handleButtonClick(e, button) {
         e.preventDefault();
-
+        
         button.style.transform = 'translateY(-3px) scale(0.95)';
         setTimeout(() => {
             button.style.transform = 'translateY(-3px) scale(1)';
         }, 150);
 
         this.createButtonRipple(button);
-
+        
         if (button.classList.contains('cta__btn--primary')) {
             this.trackConsultationClick();
             this.showConsultationModal();
@@ -117,7 +118,7 @@ class CtaSection {
         const ripple = document.createElement('span');
         const rect = button.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
-
+        
         ripple.style.cssText = `
             position: absolute;
             top: 50%;
@@ -131,7 +132,7 @@ class CtaSection {
             pointer-events: none;
             z-index: 10;
         `;
-
+        
         button.appendChild(ripple);
         setTimeout(() => ripple.remove(), 600);
     }
@@ -153,52 +154,64 @@ class CtaSection {
                     z-index: 5;
                 `;
                 button.appendChild(sparkle);
-
+                
                 setTimeout(() => sparkle.remove(), 1000);
             }, i * 100);
         }
     }
 
-    setupVisualAnimations() {
-        if (this.visual) {
-            this.visual.addEventListener('mouseenter', () => {
-                this.animateVisualHover();
+    setupLogoInteraction() {
+        if (this.logo) {
+            this.logo.addEventListener('mouseenter', () => {
+                this.animateLogoHover();
             });
 
-            this.visual.addEventListener('mouseleave', () => {
-                this.resetVisualHover();
+            this.logo.addEventListener('mouseleave', () => {
+                this.resetLogoHover();
+            });
+
+            this.logo.addEventListener('click', () => {
+                this.handleLogoClick();
             });
         }
     }
 
-    animateVisualHover() {
-        const circle = this.visual.querySelector('.cta__visual-circle');
-        const logo = this.visual.querySelector('.cta__visual-logo');
-
-        if (circle) {
-            circle.style.borderColor = 'var(--cta-primary-alpha-50)';
-            circle.style.animationDuration = '10s';
-        }
-
-        if (logo) {
-            logo.style.animationDuration = '5s';
-            logo.style.background = 'linear-gradient(135deg, var(--cta-primary-alpha-20) 0%, var(--cta-primary-alpha-40) 100%)';
-        }
+    animateLogoHover() {
+        this.createLogoGlow();
     }
 
-    resetVisualHover() {
-        const circle = this.visual.querySelector('.cta__visual-circle');
-        const logo = this.visual.querySelector('.cta__visual-logo');
+    resetLogoHover() {
+        
+    }
 
-        if (circle) {
-            circle.style.borderColor = 'var(--cta-primary-alpha-30)';
-            circle.style.animationDuration = '20s';
-        }
+    handleLogoClick() {
+        this.logo.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            this.logo.style.transform = 'scale(1.05)';
+        }, 150);
 
-        if (logo) {
-            logo.style.animationDuration = '20s';
-            logo.style.background = 'linear-gradient(135deg, var(--cta-primary-alpha-10) 0%, var(--cta-primary-alpha-20) 100%)';
-        }
+        this.trackLogoClick();
+        this.showAboutModal();
+    }
+
+    createLogoGlow() {
+        const glow = document.createElement('div');
+        glow.style.cssText = `
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: radial-gradient(circle, var(--cta-primary-alpha-20) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: ctaLogoGlow 1s ease-out;
+            pointer-events: none;
+            z-index: -1;
+        `;
+        
+        this.logo.style.position = 'relative';
+        this.logo.appendChild(glow);
+        setTimeout(() => glow.remove(), 1000);
     }
 
     setupFeatureAnimations() {
@@ -214,7 +227,7 @@ class CtaSection {
             setTimeout(() => {
                 feature.style.opacity = '1';
                 feature.style.transform = 'translateX(0)';
-
+                
                 this.createFeatureGlow(feature);
             }, index * 150);
         });
@@ -248,12 +261,24 @@ class CtaSection {
         }
     }
 
+    trackLogoClick() {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'cta_logo_click', {
+                section: 'cta'
+            });
+        }
+    }
+
     showConsultationModal() {
         console.log('Opening consultation modal from CTA');
     }
 
     initiateCall() {
         window.open('tel:+994503102529', '_self');
+    }
+
+    showAboutModal() {
+        console.log('Opening about modal from logo click');
     }
 
     destroy() {
@@ -286,11 +311,27 @@ const ctaCSS = `
     }
 }
 
+@keyframes ctaLogoGlow {
+    0% {
+        transform: scale(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
 .cta__badge,
 .cta__title,
 .cta__subtitle,
 .cta__buttons,
-.cta__features {
+.cta__features,
+.cta__logo {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);

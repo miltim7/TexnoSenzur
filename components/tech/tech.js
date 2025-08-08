@@ -6,25 +6,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Technique names array
     const techniqueNames = [
-        'JCB 220', 'JCB 290', 'JCB 330', 'CAT 329d', 'Volvo 370', 'Volvo EC350E', 'JCB js360', 'CAT 318D',
-        'Volvo ew205d', 'CAT M318D', 'CAT m322d', 'CAT 303.5e', 'JCB 8055', 'JCB 8035', 'CAT 305E',
-        'Hitachi Zaxis 33U', 'Hitachi Zaxis 48U', 'Luigong CLG 906C', 'Liugong 908c', 'CAT 303.5dcr',
-        'SHANTUI SD 32', 'Komatsu d65 px', 'CAT D6', 'Komatsu D85PX', 'Volvo g940', 'XCMG gr 165',
-        'Luigong 4180', 'Ford 3536d', 'MAN TGX D38', 'Bomag BW100', 'Bomag BW216', 'Bomag bw100',
-        'Bomag BW213', 'Ford Cargo 1826', 'Ford 1826', 'Hyundai HLF 30-5', 'Sanko DOOSAN', 'TCM FD 160',
-        'HELI CPCD 100', 'LIUGONG CPCD 30', 'CAT 428E', 'JCB 4cx4ws', 'JCB 4cx', 'MST 544', 'JCB 3cx',
-        'CAT 950H', 'Luck 35', 'Montracon', 'Özünlü Damper', 'Mitsubishi L200', 'MTZ 892', 'MTZ1021',
-        'Qazel', 'Mercedes Atego 815', 'Hyundai hd65', 'Case TX170-45', 'MST 940', 'SINOBOOM GTZZ25',
-        'Makasli', 'DPU 4045 / DPU4545', 'WELTECH 1200', 'WACKER NEUSON RD7HS', 'WACKER NEUSON BS 60-4S',
-        'ÖZKANLAR ÖVR 40S', 'ÖZKANLAR ÖVR 60S', 'ATLAS COPCO XAS 77 DD', 'ATLAS COPCO XAS 156 DD',
-        'ATLAS COPCO XAS 186 DD', 'SKYJACK SJIII 4626', 'SKYJACK SJIII 3220', 'McELROY T250 HF BUTT',
-        'TURAN BORFIT AL160-AL630', 'TURAN BORFIT HST300', 'TURAN BORFIT EF100A', 'WACKER NEUSON LTN6L',
-        'Ford Cargo 3532T'
+        'Ford 1826', 'Ford 3536d', 'Mercedes Atego 815', 'Hyundai hd65', 'Qazel', 'Mitsubishi L200', 'Ford Cargo 3532T', 'Ford Cargo 1826', 'Ford Cargo',
+
+        'Isuzu Evakuator', 'Hyundai hd35', 'Kamaz 54901', 'Mercedes Atego', 'Iveco Eurocargo', 'Iveco Daily', 'Mercedes Axor', 'Mitsubishi Canter', 'Isuzu', 'Isuzu Forward', 
+        
+        'CAT 303.5e', 'JCB 4cx', 'JCB 4cx4ws', 'CAT m322d', 'JCB js360', 'Liugong 908c', 'CAT 329d', 'CAT 305E', 'XCMG gr 165', 'Komatsu d65 px', 
+        
+        'MTZ1021', 'Komatsu D85PX', 'Volvo ew205d', 'Volvo g940', 'Luigong 4180', 'Hyundai HLF 30-5', 'Liugong 908c', 'CAT 246C', 'CAT 950H', 'JCB 220', 
+        
+        'JCB 290', 'JCB 330', 'Volvo 370', 'Volvo EC350E', 'CAT M318D', 'Bomag BW100', 'Case TX170-45', 'JCB 8035', 'Grove', 'MTZ 892', 
+        
+        'CAT 305E', 'Hitachi Zaxis 33U', 'Hitachi Zaxis 48U', 'Luigong CLG 906C', 'TCM FD 160', 'HELI CPCD 100', 'LIUGONG CPCD 30', 'Belarus-892 ESU-150', 'SHANTUI SD 32', 'CAT D6', 
+        
+        'Bomag BW213', 'JCB 8055', 'CAT 318D', 'CAT 428E', 'Bomag bw100', 'McELROY T250 HF BUTT', 'SKYJACK SJIII 4626', 'SKYJACK SJIII 4626', 'ATLAS COPCO XAS 186 DD', 'ATLAS COPCO XAS 156 DD', 
+        
+        'ATLAS COPCO XAS 77 DD', 'WACKER NEUSON BS 60-4S', 'WACKER NEUSON RD7HS', 'SINOBOOM GTZZ25', 'Sanko DOOSAN', 'MST 940', 'Luck 35'
     ];
 
     // Generate technique data
     function generateTechniques() {
-        for (let i = 1; i <= 75; i++) {
+        for (let i = 1; i <= 76; i++) {
             allTechniques.push({
                 id: i,
                 image: `assets/images/tech/${i}.jpg`,
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Create technique card
     function createTechniqueCard(technique) {
-    return `
+        return `
         <div class="technique-card" data-id="${technique.id}">
             <div class="technique-card__image">
                 <img src="${technique.image}" alt="${technique.title}" loading="lazy">
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
     `;
-}
+    }
 
     // Filter techniques by search
     function getFilteredTechniques() {
@@ -79,10 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const grid = document.querySelector('.texnikalar__grid');
         grid.innerHTML = currentTechniques.map(createTechniqueCard).join('');
 
-        // Update stats
-        updateStats(filteredTechniques.length);
-
-        // Update pagination
+        // Update pagination  
         updatePagination(filteredTechniques.length);
 
         // Add click listeners

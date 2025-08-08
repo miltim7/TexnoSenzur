@@ -1,0 +1,249 @@
+:root {
+    --brands-primary: #c99a18;
+    --brands-primary-light: #e7b836;
+    --brands-primary-dark: #a1720e;
+    --brands-white: #fff;
+    --brands-white-dark: #f8f9fa;
+    --brands-black: #000;
+    --brands-gray: #6c757d;
+    --brands-primary-alpha-05: rgba(201, 154, 24, 0.05);
+    --brands-primary-alpha-10: rgba(201, 154, 24, 0.1);
+    --brands-primary-alpha-20: rgba(201, 154, 24, 0.2);
+    --brands-primary-alpha-30: rgba(201, 154, 24, 0.3);
+    --brands-primary-alpha-50: rgba(201, 154, 24, 0.5);
+    --brands-black-alpha-10: rgba(0, 0, 0, 0.1);
+    --brands-black-alpha-15: rgba(0, 0, 0, 0.15);
+    --brands-black-alpha-20: rgba(0, 0, 0, 0.2);
+    --brands-gradient-primary: linear-gradient(135deg, var(--brands-primary) 0%, var(--brands-primary-light) 100%);
+    --brands-gradient-bg: linear-gradient(135deg, var(--brands-white) 0%, var(--brands-white-dark) 50%, var(--brands-white) 100%);
+    --brands-shadow-medium: 0 8px 30px var(--brands-black-alpha-15);
+    --brands-shadow-heavy: 0 15px 50px var(--brands-black-alpha-20);
+    --brands-shadow-primary: 0 8px 30px var(--brands-primary-alpha-30);
+    --brands-transition-fast: all 0.3s ease;
+    --brands-border-radius-md: 12px;
+    --brands-border-radius-lg: 20px;
+    --brands-border-radius-xl: 50px;
+}
+
+.brands {
+    background: var(--brands-gradient-bg);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.brands::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, var(--brands-primary-alpha-05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, var(--brands-primary-alpha-10) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.brands__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.brands__header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.brands__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    background: var(--brands-white);
+    border-radius: var(--brands-border-radius-xl);
+    margin-bottom: 2rem;
+    box-shadow: var(--brands-shadow-primary);
+    animation: brandsBadgeFloat 4s ease-in-out infinite;
+}
+
+@keyframes brandsBadgeFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+.brands__badge-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--brands-primary);
+    border-radius: 50%;
+    animation: brandsDotPulse 2s infinite;
+    box-shadow: 0 0 20px var(--brands-primary-alpha-50);
+}
+
+@keyframes brandsDotPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+.brands__badge-text {
+    color: var(--brands-primary);
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.brands__title {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.brands__title-main {
+    display: block;
+    background: linear-gradient(135deg, var(--brands-black) 0%, var(--brands-gray) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.brands__title-highlight {
+    display: block;
+    background: var(--brands-gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: brandsTitleShimmer 3s ease-in-out infinite;
+    margin-top: -0.5rem;
+}
+
+@keyframes brandsTitleShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.brands__subtitle {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    color: var(--brands-gray);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.brands__carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.brands__carousel {
+    width: 100%;
+    cursor: grab;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    overflow: visible;
+}
+
+.brands__carousel:active {
+    cursor: grabbing;
+}
+
+.brands__track {
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    width: max-content;
+    transition: transform 0.3s ease-out;
+    will-change: transform;
+    user-select: none;
+    margin-right: -2rem; /* Компенсация для последнего элемента */
+}
+
+.brands__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: var(--brands-transition-fast);
+    width: 180px;
+    height: 140px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    flex-shrink: 0;
+}
+
+.brands__item:hover {
+    transform: scale(1.05);
+    background: transparent;
+    box-shadow: none;
+}
+
+.brands__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: var(--brands-transition-fast);
+    pointer-events: none;
+}
+
+.brands__item:hover img {
+    filter: grayscale(0%);
+}
+
+.brands__scrollbar {
+    margin-top: 1rem;
+    height: 3px;
+    background: var(--brands-black-alpha-10);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.brands__scrollbar-thumb {
+    height: 100%;
+    background: var(--brands-gradient-primary);
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: var(--brands-transition-fast);
+    min-width: 30px;
+}
+
+@media (max-width: 768px) {
+    .brands {
+        padding: 4rem 0;
+    }
+    
+    .brands__container {
+        padding: 0 1rem;
+    }
+    
+    .brands__header {
+        margin-bottom: 3rem;
+    }
+    
+    .brands__item {
+        width: 160px;
+        height: 120px;
+        padding: 1.5rem;
+    }
+    
+    .brands__track {
+        padding: 2rem 1rem;
+        gap: 1rem;
+        margin-right: -1rem; /* Компенсация для мобильной версии */
+    }
+}
