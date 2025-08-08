@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="components/header/header.css">
     <link rel="stylesheet" href="components/hero/hero.css">
+    <link rel="stylesheet" href="components/services/services.css">
     <link rel="stylesheet" href="components/tech/tech.css">
     <link rel="stylesheet" href="components/advantages/advantages.css">
     <link rel="stylesheet" href="components/process/process.css">
+    <link rel="stylesheet" href="components/footer/footer.css">
+    <link rel="stylesheet" href="components/cta/cta.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -202,6 +205,228 @@
                         <span class="hero__stat-number" data-count="99">0</span>
                         <span class="hero__stat-label">Məmnuniyyət</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="services__container">
+                <div class="services__header">
+                    <div class="services__badge">
+                        <span class="services__badge-dot"></span>
+                        <span class="services__badge-text">Xidmətlərimiz</span>
+                    </div>
+                    <h2 class="services__title">
+                        <span class="services__title-main">BİZİM</span>
+                        <span class="services__title-highlight">XİDMƏTLƏR</span>
+                    </h2>
+                    <p class="services__subtitle">
+                        Texnika sahəsində geniş spektrli peşəkar xidmətlər. Keyfiyyət və etibarlılıq bizim
+                        prioritetimizdir.
+                    </p>
+                </div>
+
+                <div class="services__grid">
+                    <div class="services__card" data-category="maintenance">
+                        <div class="services__card-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="services__card-content">
+                            <h3 class="services__card-title">Dövrü Texniki Qulluq</h3>
+                            <ul class="services__card-list">
+                                <li>Yağ və filtrlerin dəyişdirilməsi</li>
+                                <li>Hərəkətli hissələrin yağlanması</li>
+                                <li>Ümumi texniki baxış</li>
+                            </ul>
+                        </div>
+                        <div class="services__card-number">01</div>
+                    </div>
+
+                    <div class="services__card" data-category="major">
+                        <div class="services__card-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.77 3.77z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="services__card-content">
+                            <h3 class="services__card-title">Əsaslı Təmir</h3>
+                            <ul class="services__card-list">
+                                <li>Mühərrik və transmissiya təmiri</li>
+                                <li>Hidravlik sistem təmiri</li>
+                                <li>Eylec sistemi yenilənməsi</li>
+                            </ul>
+                        </div>
+                        <div class="services__card-number">02</div>
+                    </div>
+
+                    <div class="services__card" data-category="current">
+                        <div class="services__card-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                                <path
+                                    d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="services__card-content">
+                            <h3 class="services__card-title">Cari Təmir</h3>
+                            <ul class="services__card-list">
+                                <li>Hərəkətli hissələrin təmiri</li>
+                                <li>Eylec qəlibləri dəyişdirilməsi</li>
+                                <li>Şin və texnika təmiri</li>
+                            </ul>
+                        </div>
+                        <div class="services__card-number">03</div>
+                    </div>
+
+                    <div class="services__card" data-category="bodywork">
+                        <div class="services__card-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M7 17l9.2-9.2c.5-.5 1.3-.5 1.8 0s.5 1.3 0 1.8L8.8 19c-.5.5-1.3.5-1.8 0s-.5-1.3 0-1.8z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <path d="M18 8l-4-4" stroke="currentColor" stroke-width="2" />
+                                <path d="M15 5l4 4" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="services__card-content">
+                            <h3 class="services__card-title">Dəmirçi və Rəngsaz İşləri</h3>
+                            <ul class="services__card-list">
+                                <li>Kuzov təmiri</li>
+                                <li>Yük yerinin təmiri</li>
+                                <li>Rəngləmə işləri</li>
+                            </ul>
+                        </div>
+                        <div class="services__card-number">04</div>
+                    </div>
+
+                    <div class="services__card" data-category="mobile">
+                        <div class="services__card-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="1" y="3" width="15" height="13" stroke="currentColor" stroke-width="2" />
+                                <path
+                                    d="M16 8h4l3 3v5h-7V8zM5.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM18.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="services__card-content">
+                            <h3 class="services__card-title">Səyyar Texniki Xidmət</h3>
+                            <ul class="services__card-list">
+                                <li>7/24 xidmət</li>
+                                <li>Ünvana çatma</li>
+                                <li>Evakuasiya xidməti</li>
+                            </ul>
+                        </div>
+                        <div class="services__card-number">05</div>
+                    </div>
+
+                    <div class="services__card" data-category="electrical">
+                        <div class="services__card-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="services__card-content">
+                            <h3 class="services__card-title">Elektrik İşləri</h3>
+                            <ul class="services__card-list">
+                                <li>Komputer diaqnostikası</li>
+                                <li>Starter və generator təmiri</li>
+                                <li>Kondisioner təmiri</li>
+                            </ul>
+                        </div>
+                        <div class="services__card-number">06</div>
+                    </div>
+
+                    <div class="services__card services__card--special" data-category="special">
+                        <div class="services__card-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <path d="M7.5 4.21l4.5 2.6 4.5-2.6M12 6.81V17M3.27 6.96L12 12.01l8.73-5.05"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="services__card-content">
+                            <h3 class="services__card-title">Xüsusi Təyinatlı Nəqliyyat</h3>
+                            <ul class="services__card-list">
+                                <li>Hidravlik nasos təmiri</li>
+                                <li>Yüksək təzyiqli sistem</li>
+                                <li>Kran və manipulyator</li>
+                            </ul>
+                        </div>
+                        <div class="services__card-number">07</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services__decorations">
+                <div class="services__decoration" data-type="gear"></div>
+                <div class="services__decoration" data-type="wrench"></div>
+                <div class="services__decoration" data-type="bolt"></div>
+            </div>
+        </section>
+
+        <section class="cta" id="cta">
+            <div class="cta__container">
+                <div class="cta__content">
+                    <div class="cta__badge">
+                        <span class="cta__badge-dot"></span>
+                        <span class="cta__badge-text">Məsləhət</span>
+                    </div>
+                    <h2 class="cta__title">Xidmət lazımdır?</h2>
+                    <p class="cta__subtitle">
+                        Bizim mütəxəssislərlə əlaqə saxlayın və ən yaxşı həlli tapın
+                    </p>
+                    <div class="cta__buttons">
+                        <button class="cta__btn cta__btn--primary">
+                            <span>Məsləhət Al</span>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </button>
+                        <button class="cta__btn cta__btn--secondary">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>Zəng Et</span>
+                        </button>
+                    </div>
+                    <div class="cta__features">
+                        <div class="cta__feature">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>Pulsuz məsləhət</span>
+                        </div>
+                        <div class="cta__feature">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>24/7 dəstək</span>
+                        </div>
+                        <div class="cta__feature">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>Sürətli cavab</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta__visual">
+                    <div class="cta__visual-circle">
+                        <div class="cta__visual-logo">
+                            <img src="assets/images/logo.png" alt="Texnosenzur">
+                        </div>
+                    </div>
+                    <div class="cta__visual-dots"></div>
                 </div>
             </div>
         </section>
@@ -446,177 +671,338 @@
         </section>
 
         <section class="process" id="process">
-    <div class="container">
-        <div class="process__header">
-            <div class="process__badge">
-                <span class="process__badge-dot"></span>
-                <span class="process__badge-text">Prosesi Nədir</span>
-            </div>
-            <h2 class="process__title">
-                <span class="process__title-main">NECƏ</span>
-                <span class="process__title-highlight">İŞLƏYİR</span>
-            </h2>
-            <p class="process__subtitle">
-                Sadə 3 addımda bizim xidmətdən necə istifadə edəcəyinizi öyrənin. Sürətli, rahat və effektiv!
-            </p>
-        </div>
-
-        <div class="process__timeline">
-            <div class="process__step" data-step="1">
-                <div class="process__step-number">
-                    <span>01</span>
-                    <div class="process__step-pulse"></div>
+            <div class="container">
+                <div class="process__header">
+                    <div class="process__badge">
+                        <span class="process__badge-dot"></span>
+                        <span class="process__badge-text">Prosesi Nədir</span>
+                    </div>
+                    <h2 class="process__title">
+                        <span class="process__title-main">NECƏ</span>
+                        <span class="process__title-highlight">İŞLƏYİR</span>
+                    </h2>
+                    <p class="process__subtitle">
+                        Sadə 3 addımda bizim xidmətdən necə istifadə edəcəyinizi öyrənin. Sürətli, rahat və effektiv!
+                    </p>
                 </div>
-                <div class="process__step-content">
-                    <div class="process__step-image">
-                        <img src="assets/images/process/step-1.webp" alt="Texnika seçimi">
-                        <div class="process__step-overlay">
+
+                <div class="process__timeline">
+                    <div class="process__step" data-step="1">
+                        <div class="process__step-number">
+                            <span>01</span>
+                            <div class="process__step-pulse"></div>
+                        </div>
+                        <div class="process__step-content">
+                            <div class="process__step-image">
+                                <img src="assets/images/process/step-1.webp" alt="Texnika seçimi">
+                                <div class="process__step-overlay">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <path d="M7.5 4.21l4.5 2.6 4.5-2.6M12 6.81V17M3.27 6.96L12 12.01l8.73-5.05"
+                                            stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="process__step-info">
+                                <h3 class="process__step-title">Sizə lazım olan texnikanı xatarın</h3>
+                                <p class="process__step-description">
+                                    Bizə telefon vurub və ya saytdan müraciət edərək hansı texnikanın sizə lazım
+                                    olduğunu bildirin. Mütəxəssislərimiz sizə ən uyğun variantları təklif edəcək.
+                                </p>
+                                <div class="process__step-features">
+                                    <div class="feature-item">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span>Pulsuz məsləhət</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span>24/7 dəstək</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process__step-connector"></div>
+                    </div>
+
+                    <div class="process__step" data-step="2">
+                        <div class="process__step-number">
+                            <span>02</span>
+                            <div class="process__step-pulse"></div>
+                        </div>
+                        <div class="process__step-content">
+                            <div class="process__step-info">
+                                <h3 class="process__step-title">Texnikanı tapdıqdan sonra sifarişi verin</h3>
+                                <p class="process__step-description">
+                                    Təklif edilən texnikalardan bəyəndiyinizi seçin. Rəsmiləşdirmə prosesi çox sadədir
+                                    və sizə heç bir çətinlik yaşatmır.
+                                </p>
+                                <div class="process__step-features">
+                                    <div class="feature-item">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span>Sürətli rəsmiləşdirmə</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span>Şəffaf qiymət</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="process__step-image">
+                                <img src="assets/images/process/step-2.webp" alt="Sifariş vermə">
+                                <div class="process__step-overlay">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process__step-connector"></div>
+                    </div>
+
+                    <div class="process__step" data-step="3">
+                        <div class="process__step-number">
+                            <span>03</span>
+                            <div class="process__step-pulse"></div>
+                        </div>
+                        <div class="process__step-content">
+                            <div class="process__step-image">
+                                <img src="assets/images/process/step-3.jpg" alt="Texnika çatdırılması">
+                                <div class="process__step-overlay">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M1 3h15l-1 7H3L1 3zM1 3l-1-2M7 13v8a2 2 0 002 2h6a2 2 0 002-2v-8M17 8v5l3-3-3-3"
+                                            stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="process__step-info">
+                                <h3 class="process__step-title">Biz həmin texnikanı ünvanınıza göndərək</h3>
+                                <p class="process__step-description">
+                                    Texnikanı profesional komandamız sizin təyin etdiyiniz ünvana çatdırır və lazım
+                                    gələrsə işə salma prosesində kömək edir.
+                                </p>
+                                <div class="process__step-features">
+                                    <div class="feature-item">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span>Pulsuz çatdırılma</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span>Professional quraşdırma</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process__cta">
+                    <div class="process__cta-content">
+                        <h3>Hazıram başlamaq üçün!</h3>
+                        <p>İndi bizə müraciət edin və texnikanızı əldə edin</p>
+                        <button class="process__cta-btn">
+                            <span>İndi Sifariş Ver</span>
                             <svg viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path d="M7.5 4.21l4.5 2.6 4.5-2.6M12 6.81V17M3.27 6.96L12 12.01l8.73-5.05"
-                                    stroke="currentColor" stroke-width="2" />
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </div>
-                    </div>
-                    <div class="process__step-info">
-                        <h3 class="process__step-title">Sizə lazım olan texnikanı xatarın</h3>
-                        <p class="process__step-description">
-                            Bizə telefon vurub və ya saytdan müraciət edərək hansı texnikanın sizə lazım
-                            olduğunu bildirin. Mütəxəssislərimiz sizə ən uyğun variantları təklif edəcək.
-                        </p>
-                        <div class="process__step-features">
-                            <div class="feature-item">
-                                <svg viewBox="0 0 24 24" fill="none">
-                                    <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span>Pulsuz məsləhət</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg viewBox="0 0 24 24" fill="none">
-                                    <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span>24/7 dəstək</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="process__step-connector"></div>
-            </div>
-
-            <div class="process__step" data-step="2">
-                <div class="process__step-number">
-                    <span>02</span>
-                    <div class="process__step-pulse"></div>
-                </div>
-                <div class="process__step-content">
-                    <div class="process__step-info">
-                        <h3 class="process__step-title">Texnikanı tapdıqdan sonra sifarişi verin</h3>
-                        <p class="process__step-description">
-                            Təklif edilən texnikalardan bəyəndiyinizi seçin. Rəsmiləşdirmə prosesi çox sadədir
-                            və sizə heç bir çətinlik yaşatmır.
-                        </p>
-                        <div class="process__step-features">
-                            <div class="feature-item">
-                                <svg viewBox="0 0 24 24" fill="none">
-                                    <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span>Sürətli rəsmiləşdirmə</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg viewBox="0 0 24 24" fill="none">
-                                    <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span>Şəffaf qiymət</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="process__step-image">
-                        <img src="assets/images/process/step-2.webp" alt="Sifariş vermə">
-                        <div class="process__step-overlay">
-                            <svg viewBox="0 0 24 24" fill="none">
-                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor"
-                                    stroke-width="2" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="process__step-connector"></div>
-            </div>
-
-            <div class="process__step" data-step="3">
-                <div class="process__step-number">
-                    <span>03</span>
-                    <div class="process__step-pulse"></div>
-                </div>
-                <div class="process__step-content">
-                    <div class="process__step-image">
-                        <img src="assets/images/process/step-3.jpg" alt="Texnika çatdırılması">
-                        <div class="process__step-overlay">
-                            <svg viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M1 3h15l-1 7H3L1 3zM1 3l-1-2M7 13v8a2 2 0 002 2h6a2 2 0 002-2v-8M17 8v5l3-3-3-3"
-                                    stroke="currentColor" stroke-width="2" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="process__step-info">
-                        <h3 class="process__step-title">Biz həmin texnikanı ünvanınıza göndərək</h3>
-                        <p class="process__step-description">
-                            Texnikanı profesional komandamız sizin təyin etdiyiniz ünvana çatdırır və lazım
-                            gələrsə işə salma prosesində kömək edir.
-                        </p>
-                        <div class="process__step-features">
-                            <div class="feature-item">
-                                <svg viewBox="0 0 24 24" fill="none">
-                                    <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span>Pulsuz çatdırılma</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg viewBox="0 0 24 24" fill="none">
-                                    <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span>Professional quraşdırma</span>
-                            </div>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="process__cta">
-            <div class="process__cta-content">
-                <h3>Hazıram başlamaq üçün!</h3>
-                <p>İndi bizə müraciət edin və texnikanızı əldə edin</p>
-                <button class="process__cta-btn">
-                    <span>İndi Sifariş Ver</span>
-                    <svg viewBox="0 0 24 24" fill="none">
-                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <span class="footer__logo-text">TEXNOSENZUR</span>
+                    </div>
+                    <p class="footer__description">
+                        Texnika kirayəsi və satışı sahəsində Azərbaycanda aparıcı şirkət. Yüksək keyfiyyət və etibarlı
+                        xidmət.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" data-platform="facebook">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" data-platform="instagram">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor"
+                                    stroke-width="2" />
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="currentColor"
+                                    stroke-width="2" />
+                                <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" data-platform="whatsapp">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" data-platform="linkedin">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" />
+                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Xidmətlər</h3>
+                        <ul class="footer__list">
+                            <li><a href="#services" class="footer__link">Texnika Kirayəsi</a></li>
+                            <li><a href="#services" class="footer__link">Texnika Satışı</a></li>
+                            <li><a href="#services" class="footer__link">Quraşdırma</a></li>
+                            <li><a href="#services" class="footer__link">Texniki Dəstək</a></li>
+                            <li><a href="#services" class="footer__link">Servis</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Şirkət</h3>
+                        <ul class="footer__list">
+                            <li><a href="#about" class="footer__link">Haqqımızda</a></li>
+                            <li><a href="#process" class="footer__link">Necə İşləyir</a></li>
+                            <li><a href="#team" class="footer__link">Komandamız</a></li>
+                            <li><a href="#careers" class="footer__link">Karyera</a></li>
+                            <li><a href="#news" class="footer__link">Xəbərlər</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Dəstək</h3>
+                        <ul class="footer__list">
+                            <li><a href="#help" class="footer__link">Yardım Mərkəzi</a></li>
+                            <li><a href="#contact" class="footer__link">Əlaqə</a></li>
+                            <li><a href="#faq" class="footer__link">FAQ</a></li>
+                            <li><a href="#privacy" class="footer__link">Məxfilik</a></li>
+                            <li><a href="#terms" class="footer__link">Şərtlər</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__contact">
+                    <h3 class="footer__contact-title">Əlaqə</h3>
+                    <div class="footer__contact-info">
+                        <div class="footer__contact-item">
+                            <div class="footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+                                        stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="footer__contact-details">
+                                <a href="tel:+994503102529" class="footer__contact-link">+994 50 310 25 29</a>
+                                <a href="tel:+994553102529" class="footer__contact-link">+994 55 310 25 29</a>
+                            </div>
+                        </div>
+
+                        <div class="footer__contact-item">
+                            <div class="footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                        stroke="currentColor" stroke-width="2" />
+                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="footer__contact-details">
+                                <a href="mailto:ziya.nazarov@texnosenzur.az"
+                                    class="footer__contact-link">ziya.nazarov@texnosenzur.az</a>
+                            </div>
+                        </div>
+
+                        <div class="footer__contact-item">
+                            <div class="footer__contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="footer__contact-details">
+                                <span class="footer__contact-text">Bakı, Azərbaycan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__cta">
+                        <button class="footer__cta-btn">
+                            <span>Bizimlə Əlaqə</span>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__bottom-content">
+                    <p class="footer__copyright">
+                        © 2025 TexnoSenzur. Bütün hüquqlar qorunur.
+                    </p>
+                    <div class="footer__bottom-links">
+                        <a href="#privacy" class="footer__bottom-link">Məxfilik Siyasəti</a>
+                        <a href="#terms" class="footer__bottom-link">İstifadə Şərtləri</a>
+                        <a href="#cookies" class="footer__bottom-link">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__decorations">
+            <div class="footer__decoration" data-type="circle"></div>
+            <div class="footer__decoration" data-type="square"></div>
+            <div class="footer__decoration" data-type="triangle"></div>
+        </div>
+    </footer>
 
 
     <script src="components/header/header.js"></script>
     <script src="components/hero/hero.js"></script>
+    <script src="components/services/services.js"></script>
     <script src="components/tech/tech.js"></script>
     <script src="components/advantages/advantages.js"></script>
     <script src="components/process/process.js"></script>
+    <script src="components/footer/footer.js"></script>
+    <script src="components/cta/cta.js"></script>
 </body>
 
 </html>
